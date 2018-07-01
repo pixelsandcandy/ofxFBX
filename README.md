@@ -1,3 +1,31 @@
+# Edit of_v0.10.0
+You need to do this in order for ofxFBX to work
+```
+// ofNode.h
+void setTransformMatrix(const ofMatrix4x4 &m44);
+
+// ofNode.cpp
+void ofNode::setTransformMatrix(const ofMatrix4x4 &m44) {
+    ofVec3f position;
+    ofQuaternion orientation;
+    ofVec3f scale;
+    ofQuaternion so;
+    
+    m44.decompose( position, orientation, scale, so );
+
+    this->position = {position.x, position.y, position.z};
+    this->orientation = orientation;
+    this->scale = scale;
+    
+    onScaleChanged();
+    onPositionChanged();
+    onOrientationChanged();
+    
+    createMatrix();
+}
+
+```
+
 # ofxFBX
 
 ![FBX version 7.4](ReadMeImages/fbxAnim.gif)
