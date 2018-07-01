@@ -1,5 +1,5 @@
 # Changes to openFrameworks v0.10.0
-You need to do this in order for ofxFBX to work
+You need to add this in order for ofxFBX to work
 ```
 // ofNode.h
 void setTransformMatrix(const ofMatrix4x4 &m44);
