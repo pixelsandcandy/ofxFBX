@@ -1,4 +1,4 @@
-# Edit of_v0.10.0
+# Changes to openFrameworks v0.10.0
 You need to do this in order for ofxFBX to work
 ```
 // ofNode.h
