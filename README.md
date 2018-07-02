@@ -2,6 +2,7 @@
 You need to add this in order for ofxFBX to work
 ```
 // ofNode.h
+#include "ofMatrix4x4.h"
 void setTransformMatrix(const ofMatrix4x4 &m44);
 
 // ofNode.cpp
